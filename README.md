@@ -16,7 +16,7 @@ DEPENDENCIES
 
 For full functionality, the following additional components must be installed
 on your computer. Most functions will work without them, however, with these 
-components installed, the gramplet will just show a biography in its formatted
+components installed, the gramplet will just show a bio in its formatted
 form, and not just the raw wiki format.
 
 1) WebKit2 - https://webkit.org/downloads/
