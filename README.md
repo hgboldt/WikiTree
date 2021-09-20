@@ -15,7 +15,9 @@ This allows you to do a number of things:
 DEPENDENCIES
 
 For full functionality, the following additional components must be installed
-on your computer:
+on your computer. Most functions will work without them, however, with these 
+components installed, the gramplet will show a biography in its formatted
+form, and not just the raw wiki format.
 
 1) WebKit2 - https://webkit.org/downloads/
 
