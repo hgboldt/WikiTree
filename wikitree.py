@@ -176,9 +176,10 @@ class WikiTree(Gramplet):
         grid.attach(search_box, 0, 2, 1, 1)
 
         # View box
-        view_button = Gtk.Button.new_with_label(_("View"))
-        view_button.connect("clicked", self.on_click_view)
-        grid.attach(view_button, 0, 3, 1, 1)
+        self.view_button = Gtk.Button.new_with_label(_("View"))
+        self.view_button.set_sensitive(False)
+        self.view_button.connect("clicked", self.on_click_view)
+        grid.attach(self.view_button, 0, 3, 1, 1)
 
         # Generate bio button and options
         generate_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -313,8 +314,10 @@ class WikiTree(Gramplet):
         wikitree_attr = get_wikitree_attributes(db, person)
         if wikitree_attr:
             self.id_entry.set_text(wikitree_attr['id'])
+            self.view_button.set_sensitive(True)
         else:
             self.id_entry.set_text('')
+            self.view_button.set_sensitive(False)
 
 
 
@@ -659,6 +662,3 @@ class ButtonWithValues(Gtk.Button):
         if key in self.values:
             return self.values[key]
         return None
-
-
-
